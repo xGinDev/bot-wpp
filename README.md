@@ -1,1 +1,1 @@
-# Gin Bot (WhatsApp Gruoup)
+# Gin Bot (WhatsApp Group)
