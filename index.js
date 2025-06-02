@@ -4,24 +4,9 @@ const { createCanvas, loadImage } = require("canvas");
 const chromium = require("chromium");
 const axios = require("axios"); // Necesario para manejar las imágenes
 
-const authPath = path.join(__dirname, '.wwebjs_auth');
-if (fs.existsSync(authPath)) {
-  const lockFile = path.join(authPath, 'LOCK');
-  if (fs.existsSync(lockFile)) fs.unlinkSync(lockFile);
-}
-
 const client = new Client({
-  authStrategy: new LocalAuth({
-    dataPath: "/app/.wwebjs_auth"  // Ruta absoluta en Docker
-  }),
-  puppeteer: {
-    headless: true,
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--single-process'
-    ]
-  }
+  puppeteer: { args: ["--no-sandbox", "--disable-dev-shm-usage"] },
+  authStrategy: new LocalAuth(),
 });
 
 client.on("qr", (qr) => {
@@ -169,7 +154,7 @@ client.on("message", async (message) => {
 
     if (!profilePicUrl) {
       await chat.sendMessage(
-        `@${contact.number} tiene un ${feura}% de homosexualidad 😬 (pero no tiene foto o la tiene privada). Eso lo hace más homosexual`,
+        `@${contact.number} tiene un ${feura}% de homosexualidad 😬 (pero no tiene foto o la tiene privada). Eso lo hace más homosexual.`,
         {
           mentions: [contact],
         }
@@ -179,9 +164,11 @@ client.on("message", async (message) => {
 
     try {
       // Usar axios para obtener la imagen
-      const response = await axios.get(profilePicUrl, { responseType: 'arraybuffer' });
+      const response = await axios.get(profilePicUrl, {
+        responseType: "arraybuffer",
+      });
       const profileBuffer = Buffer.from(response.data);
-      
+
       const editedImageBuffer = await createLgtbiOverlay(profileBuffer);
       const media = new MessageMedia(
         "image/png",
@@ -207,20 +194,20 @@ client.on("message", async (message) => {
 async function createLgtbiOverlay(profileBuffer) {
   try {
     const profileImg = await loadImage(profileBuffer);
-    
+
     // Asegurar un tamaño razonable
     const width = Math.min(1024, profileImg.width);
     const height = Math.min(1024, profileImg.height);
-    
+
     const canvas = createCanvas(width, height);
     const ctx = canvas.getContext("2d");
-    
+
     ctx.drawImage(profileImg, 0, 0, width, height);
-    
+
     const rainbow = createRainbowOverlay(width, height);
     ctx.globalAlpha = 0.4;
     ctx.drawImage(rainbow, 0, 0);
-    
+
     return canvas.toBuffer("image/png");
   } catch (error) {
     console.error("❌ Error al procesar imagen:", error);
@@ -250,10 +237,4 @@ function createRainbowOverlay(width, height) {
   return canvas;
 }
 
-client.on('disconnected', (reason) => {
-  console.log('⚡ Sesión cerrada:', reason);
-  if (fs.existsSync(authPath)) fs.rmSync(authPath, { recursive: true });
-});
-
-require("./server");
 client.initialize();
