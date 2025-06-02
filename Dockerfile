@@ -24,6 +24,8 @@ RUN npm install -g pm2
 
 # Copia el resto del código
 COPY . .
+# 🔐 Copia la sesión de WhatsApp
+COPY .wwebjs_auth .wwebjs_auth
 
 # Variables de entorno de PM2 (opcional para monitoreo remoto)
 ENV PM2_PUBLIC_KEY=61gb1q2ruggk4l3
