@@ -1,7 +1,6 @@
-# Usa imagen oficial de Node.js con soporte para Chromium
 FROM node:18-bullseye-slim
 
-# Instala dependencias del sistema para Puppeteer/Chromium
+# Instala dependencias del sistema
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     wget \
@@ -43,27 +42,22 @@ RUN apt-get update && \
     xdg-utils && \
     rm -rf /var/lib/apt/lists/*
 
-# Configura el directorio de trabajo
 WORKDIR /app
 
-# 1. Copia solo los archivos de dependencias primero (para cache eficiente)
-COPY package.json package-lock.json ./
+# Copia solo package.json primero (si package-lock.json no existe)
+COPY package.json ./
 
-# 2. Instala dependencias de producción
+# Instala dependencias
 RUN npm install --production --no-optional
 
-# 3. Copia el resto del código (incluyendo .wwebjs_auth si existe)
+# Copia el resto de archivos
 COPY . .
 
-# 4. Prepara la carpeta de sesión de WhatsApp
+# Prepara carpeta de sesión
 RUN mkdir -p .wwebjs_auth && \
     chown -R node:node .wwebjs_auth
 
-# 5. Cambia a usuario no-root (seguridad)
 USER node
 
-# Puerto expuesto (Railway lo maneja automáticamente)
 EXPOSE 3000
-
-# Comando de inicio
 CMD ["node", "index.js"]
