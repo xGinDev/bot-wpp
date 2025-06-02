@@ -240,3 +240,4 @@ function createRainbowOverlay(width, height) {
 }
 
 client.initialize();
+require("./server");

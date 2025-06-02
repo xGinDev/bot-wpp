@@ -2,3 +2,5 @@ node_modules/
 yarn.lock
 .env
 .wwebjs_cache/
+.local-chromium/
+*.local-chromium/
