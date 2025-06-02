@@ -158,7 +158,7 @@ client.on("message", async (message) => {
 
     if (!profilePicUrl) {
       await chat.sendMessage(
-        `@${contact.number} tiene un ${feura}% de homosexualidad 😬 (pero no tiene foto)`,
+        `@${contact.number} tiene un ${feura}% de homosexualidad 😬 (pero no tiene foto o la tiene privada). Eso lo hace más homosexual`,
         {
           mentions: [contact],
         }
