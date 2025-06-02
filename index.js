@@ -4,13 +4,24 @@ const { createCanvas, loadImage } = require("canvas");
 const chromium = require("chromium");
 const axios = require("axios"); // Necesario para manejar las imágenes
 
+const authPath = path.join(__dirname, '.wwebjs_auth');
+if (fs.existsSync(authPath)) {
+  const lockFile = path.join(authPath, 'LOCK');
+  if (fs.existsSync(lockFile)) fs.unlinkSync(lockFile);
+}
+
 const client = new Client({
-  authStrategy: new LocalAuth(),
+  authStrategy: new LocalAuth({
+    dataPath: "/app/.wwebjs_auth"  // Ruta absoluta en Docker
+  }),
   puppeteer: {
     headless: true,
-    executablePath: chromium.path,
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
-  },
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--single-process'
+    ]
+  }
 });
 
 client.on("qr", (qr) => {
@@ -239,5 +250,10 @@ function createRainbowOverlay(width, height) {
   return canvas;
 }
 
-client.initialize();
+client.on('disconnected', (reason) => {
+  console.log('⚡ Sesión cerrada:', reason);
+  if (fs.existsSync(authPath)) fs.rmSync(authPath, { recursive: true });
+});
+
 require("./server");
+client.initialize();
