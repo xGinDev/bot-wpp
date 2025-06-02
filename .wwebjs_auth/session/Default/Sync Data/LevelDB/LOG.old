@@ -1,3 +1,2 @@
-2025/06/01-23:56:39.506 ef2b7 Reusing MANIFEST /Users/xgindev/Desktop/QA/bot-wpp/.wwebjs_auth/session/Default/Sync Data/LevelDB/MANIFEST-000001
-2025/06/01-23:56:39.522 ef2b7 Recovering log #3
-2025/06/01-23:56:39.523 ef2b7 Reusing old log /Users/xgindev/Desktop/QA/bot-wpp/.wwebjs_auth/session/Default/Sync Data/LevelDB/000003.log 
+2025/06/02-07:29:15.451 1d14 Creating DB C:\Users\John\Desktop\My Projects\bot-wpp\.wwebjs_auth\session\Default\Sync Data\LevelDB since it was missing.
+2025/06/02-07:29:15.467 1d14 Reusing MANIFEST C:\Users\John\Desktop\My Projects\bot-wpp\.wwebjs_auth\session\Default\Sync Data\LevelDB/MANIFEST-000001

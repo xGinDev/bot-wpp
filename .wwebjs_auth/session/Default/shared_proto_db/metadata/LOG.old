@@ -1,3 +1,2 @@
-2025/06/01-23:56:40.263 ef2ef Reusing MANIFEST /Users/xgindev/Desktop/QA/bot-wpp/.wwebjs_auth/session/Default/shared_proto_db/metadata/MANIFEST-000001
-2025/06/01-23:56:40.263 ef2ef Recovering log #3
-2025/06/01-23:56:40.264 ef2ef Reusing old log /Users/xgindev/Desktop/QA/bot-wpp/.wwebjs_auth/session/Default/shared_proto_db/metadata/000003.log 
+2025/06/02-07:29:15.547 2d14 Creating DB C:\Users\John\Desktop\My Projects\bot-wpp\.wwebjs_auth\session\Default\shared_proto_db\metadata since it was missing.
+2025/06/02-07:29:15.561 2d14 Reusing MANIFEST C:\Users\John\Desktop\My Projects\bot-wpp\.wwebjs_auth\session\Default\shared_proto_db\metadata/MANIFEST-000001

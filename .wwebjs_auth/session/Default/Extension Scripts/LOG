@@ -1,3 +1,2 @@
-2025/05/26-16:35:22.702 7390d Reusing MANIFEST /Users/xgindev/Desktop/QA/bot-wpp/.wwebjs_auth/session/Default/Extension Scripts/MANIFEST-000001
-2025/05/26-16:35:22.702 7390d Recovering log #3
-2025/05/26-16:35:22.703 7390d Reusing old log /Users/xgindev/Desktop/QA/bot-wpp/.wwebjs_auth/session/Default/Extension Scripts/000003.log 
+2025/06/02-07:29:15.507 830 Creating DB C:\Users\John\Desktop\My Projects\bot-wpp\.wwebjs_auth\session\Default\Extension Scripts since it was missing.
+2025/06/02-07:29:15.514 830 Reusing MANIFEST C:\Users\John\Desktop\My Projects\bot-wpp\.wwebjs_auth\session\Default\Extension Scripts/MANIFEST-000001

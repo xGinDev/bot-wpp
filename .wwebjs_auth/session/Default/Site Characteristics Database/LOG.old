@@ -1,3 +1,2 @@
-2025/06/01-23:56:39.539 ef2b7 Reusing MANIFEST /Users/xgindev/Desktop/QA/bot-wpp/.wwebjs_auth/session/Default/Site Characteristics Database/MANIFEST-000001
-2025/06/01-23:56:39.539 ef2b7 Recovering log #3
-2025/06/01-23:56:39.539 ef2b7 Reusing old log /Users/xgindev/Desktop/QA/bot-wpp/.wwebjs_auth/session/Default/Site Characteristics Database/000003.log 
+2025/06/02-07:29:15.464 2380 Creating DB C:\Users\John\Desktop\My Projects\bot-wpp\.wwebjs_auth\session\Default\Site Characteristics Database since it was missing.
+2025/06/02-07:29:15.474 2380 Reusing MANIFEST C:\Users\John\Desktop\My Projects\bot-wpp\.wwebjs_auth\session\Default\Site Characteristics Database/MANIFEST-000001
