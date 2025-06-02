@@ -1,0 +1,73 @@
+2025/06/01-23:57:58.070 ef78a Reusing MANIFEST /Users/xgindev/Desktop/QA/bot-wpp/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/06/01-23:57:58.071 ef78a Recovering log #361
+2025/06/01-23:57:58.102 ef78a Reusing old log /Users/xgindev/Desktop/QA/bot-wpp/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000361.log 
+2025/06/01-23:57:59.464 ef788 Level-0 table #370: started
+2025/06/01-23:57:59.477 ef788 Level-0 table #370: 439968 bytes OK
+2025/06/01-23:57:59.479 ef788 Delete type=0 #361
+2025/06/01-23:57:59.479 ef788 Manual compaction at level-0 from '\x00>\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00?\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/06/01-23:58:00.670 ef7cc Compacting 1@1 + 5@2 files
+2025/06/01-23:58:00.745 ef7cc Generated table #371@1: 86005 keys, 2235457 bytes
+2025/06/01-23:58:00.805 ef7cc Generated table #372@1: 68384 keys, 2246459 bytes
+2025/06/01-23:58:00.833 ef7cc Generated table #373@1: 10975 keys, 2187016 bytes
+2025/06/01-23:58:00.857 ef7cc Generated table #374@1: 13904 keys, 2151412 bytes
+2025/06/01-23:58:00.903 ef7cc Generated table #375@1: 53070 keys, 1852385 bytes
+2025/06/01-23:58:00.903 ef7cc Compacted 1@1 + 5@2 files => 10672729 bytes
+2025/06/01-23:58:00.904 ef7cc compacted to: files[ 0 0 5 0 0 0 0 ]
+2025/06/01-23:58:00.905 ef7cc Delete type=2 #363
+2025/06/01-23:58:00.905 ef7cc Delete type=2 #365
+2025/06/01-23:58:00.905 ef7cc Delete type=2 #364
+2025/06/01-23:58:00.905 ef7cc Delete type=2 #370
+2025/06/01-23:58:00.905 ef7cc Delete type=2 #366
+2025/06/01-23:58:00.905 ef7cc Delete type=2 #367
+2025/06/02-00:04:46.124 ef78a Level-0 table #377: started
+2025/06/02-00:04:46.160 ef78a Level-0 table #377: 1258111 bytes OK
+2025/06/02-00:04:46.163 ef78a Delete type=0 #369
+2025/06/02-00:04:48.820 ef78a Compacting 1@1 + 5@2 files
+2025/06/02-00:04:48.896 ef78a Generated table #378@1: 85718 keys, 2235689 bytes
+2025/06/02-00:04:48.955 ef78a Generated table #379@1: 71693 keys, 2265068 bytes
+2025/06/02-00:04:48.981 ef78a Generated table #380@1: 10098 keys, 2182439 bytes
+2025/06/02-00:04:49.011 ef78a Generated table #381@1: 15307 keys, 2160095 bytes
+2025/06/02-00:04:49.054 ef78a Generated table #382@1: 53877 keys, 1992929 bytes
+2025/06/02-00:04:49.055 ef78a Compacted 1@1 + 5@2 files => 10836220 bytes
+2025/06/02-00:04:49.057 ef78a compacted to: files[ 0 0 5 0 0 0 0 ]
+2025/06/02-00:04:49.058 ef78a Delete type=2 #377
+2025/06/02-00:04:49.058 ef78a Delete type=2 #374
+2025/06/02-00:04:49.058 ef78a Delete type=2 #375
+2025/06/02-00:04:49.058 ef78a Delete type=2 #371
+2025/06/02-00:04:49.058 ef78a Delete type=2 #372
+2025/06/02-00:04:49.058 ef78a Delete type=2 #373
+2025/06/02-00:09:03.002 ef7cc Level-0 table #384: started
+2025/06/02-00:09:03.024 ef7cc Level-0 table #384: 1097562 bytes OK
+2025/06/02-00:09:03.030 ef7cc Delete type=0 #376
+2025/06/02-00:09:03.179 ef78a Compacting 1@1 + 5@2 files
+2025/06/02-00:09:03.257 ef78a Generated table #385@1: 85488 keys, 2235796 bytes
+2025/06/02-00:09:03.317 ef78a Generated table #386@1: 74619 keys, 2259518 bytes
+2025/06/02-00:09:03.343 ef78a Generated table #387@1: 9034 keys, 2176940 bytes
+2025/06/02-00:09:03.376 ef78a Generated table #388@1: 17065 keys, 2169646 bytes
+2025/06/02-00:09:03.417 ef78a Generated table #389@1: 55123 keys, 2172654 bytes
+2025/06/02-00:09:03.418 ef78a Compacted 1@1 + 5@2 files => 11014554 bytes
+2025/06/02-00:09:03.421 ef78a compacted to: files[ 0 0 5 0 0 0 0 ]
+2025/06/02-00:09:03.421 ef78a Delete type=2 #381
+2025/06/02-00:09:03.421 ef78a Delete type=2 #380
+2025/06/02-00:09:03.421 ef78a Delete type=2 #382
+2025/06/02-00:09:03.422 ef78a Delete type=2 #378
+2025/06/02-00:09:03.422 ef78a Delete type=2 #379
+2025/06/02-00:09:03.422 ef78a Delete type=2 #384
+2025/06/02-00:13:13.434 ef78a Level-0 table #391: started
+2025/06/02-00:13:13.465 ef78a Level-0 table #391: 1225333 bytes OK
+2025/06/02-00:13:13.472 ef78a Delete type=0 #383
+2025/06/02-00:13:16.943 ef78a Compacting 1@1 + 5@2 files
+2025/06/02-00:13:17.054 ef78a Generated table #392@1: 85170 keys, 2234331 bytes
+2025/06/02-00:13:17.116 ef78a Generated table #393@1: 78423 keys, 2264432 bytes
+2025/06/02-00:13:17.139 ef78a Generated table #394@1: 7809 keys, 2169860 bytes
+2025/06/02-00:13:17.171 ef78a Generated table #395@1: 18635 keys, 2178107 bytes
+2025/06/02-00:13:17.210 ef78a Generated table #396@1: 49353 keys, 2188434 bytes
+2025/06/02-00:13:17.216 ef78a Generated table #397@1: 6797 keys, 166654 bytes
+2025/06/02-00:13:17.216 ef78a Compacted 1@1 + 5@2 files => 11201818 bytes
+2025/06/02-00:13:17.218 ef78a compacted to: files[ 0 0 6 0 0 0 0 ]
+2025/06/02-00:13:17.219 ef78a Delete type=2 #388
+2025/06/02-00:13:17.219 ef78a Delete type=2 #389
+2025/06/02-00:13:17.219 ef78a Delete type=2 #387
+2025/06/02-00:13:17.219 ef78a Delete type=2 #386
+2025/06/02-00:13:17.219 ef78a Delete type=2 #391
+2025/06/02-00:13:17.219 ef78a Delete type=2 #385

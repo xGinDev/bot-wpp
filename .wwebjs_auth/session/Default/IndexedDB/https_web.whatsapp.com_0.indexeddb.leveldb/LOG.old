@@ -1,0 +1,21 @@
+2025/06/01-23:56:40.954 ef2b7 Reusing MANIFEST /Users/xgindev/Desktop/QA/bot-wpp/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/06/01-23:56:40.955 ef2b7 Recovering log #353
+2025/06/01-23:56:41.004 ef2b7 Reusing old log /Users/xgindev/Desktop/QA/bot-wpp/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000353.log 
+2025/06/01-23:56:42.488 ef2ed Manual compaction at level-0 from '\x00=\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00>\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/06/01-23:56:47.839 ef2b9 Level-0 table #362: started
+2025/06/01-23:56:47.870 ef2b9 Level-0 table #362: 1071266 bytes OK
+2025/06/01-23:56:47.877 ef2b9 Delete type=0 #353
+2025/06/01-23:56:48.384 ef2ed Compacting 1@1 + 5@2 files
+2025/06/01-23:56:48.473 ef2ed Generated table #363@1: 86011 keys, 2235647 bytes
+2025/06/01-23:56:48.527 ef2ed Generated table #364@1: 68268 keys, 2248152 bytes
+2025/06/01-23:56:48.553 ef2ed Generated table #365@1: 11020 keys, 2187230 bytes
+2025/06/01-23:56:48.578 ef2ed Generated table #366@1: 14521 keys, 2153056 bytes
+2025/06/01-23:56:48.615 ef2ed Generated table #367@1: 47062 keys, 1693879 bytes
+2025/06/01-23:56:48.615 ef2ed Compacted 1@1 + 5@2 files => 10517964 bytes
+2025/06/01-23:56:48.618 ef2ed compacted to: files[ 0 0 5 0 0 0 0 ]
+2025/06/01-23:56:48.618 ef2ed Delete type=2 #362
+2025/06/01-23:56:48.618 ef2ed Delete type=2 #359
+2025/06/01-23:56:48.618 ef2ed Delete type=2 #358
+2025/06/01-23:56:48.619 ef2ed Delete type=2 #356
+2025/06/01-23:56:48.619 ef2ed Delete type=2 #357
+2025/06/01-23:56:48.619 ef2ed Delete type=2 #355
