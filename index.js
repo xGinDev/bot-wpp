@@ -142,6 +142,63 @@ client.on("message", async (message) => {
     await chat.sendMessage(`Chistesito  \n\n ${chiste}`);
   }
 
+  if (message.body.toLowerCase().startsWith("/selected")) {
+    const args = message.body.split(" ");
+    if (args.length < 2) {
+      await chat.sendMessage(
+        "💡 Uso correcto:\n/selected [gay|otaku|cachón|random] @usuario (opcional)"
+      );
+      return;
+    }
+
+    const option = args[1].toLowerCase();
+    const validOptions = ["gay", "otaku", "cachón", "random"];
+
+    if (!validOptions.includes(option)) {
+      await chat.sendMessage(
+        "❌ Opción no válida. Usa: gay, otaku, cachón o random"
+      );
+      return;
+    }
+
+    let targetContact;
+    const mentionedIds = message.mentionedIds;
+
+    // Si se mencionó a alguien, usar esa persona
+    if (mentionedIds.length > 0) {
+      targetContact = await client.getContactById(mentionedIds[0]);
+    } else {
+      // Si es "random" y no se mencionó a nadie, seleccionar aleatoriamente
+      if (option === "random") {
+        const randomIndex = Math.floor(
+          Math.random() * chat.participants.length
+        );
+        targetContact = chat.participants[randomIndex];
+      } else {
+        await chat.sendMessage(
+          "ℹ️ Debes mencionar a alguien o usar 'random' para selección aleatoria"
+        );
+        return;
+      }
+    }
+
+    // Definir los mensajes para cada opción
+    const messages = {
+      gay: `🏳️‍🌈 @${targetContact.id.user} es el gay del grupo, que orgullo!`,
+      otaku: `🇯🇵 @${targetContact.id.user} es el otaku del grupo, mira ese pelo aceitoso!`,
+      cachón: `💔 @${targetContact.id.user} es el cachón del grupo, le encanta que le pisen los tenis!`,
+      random: `🎲 @${
+        targetContact.id.user
+      } fue seleccionado aleatoriamente para ser el ${
+        validOptions[Math.floor(Math.random() * 3)]
+      } del grupo!`,
+    };
+
+    await chat.sendMessage(messages[option], {
+      mentions: [targetContact.id._serialized],
+    });
+  }
+
   if (message.body.startsWith("/medition")) {
     const mentions = message.mentionedIds;
     if (mentions.length === 0) {
@@ -168,9 +225,11 @@ client.on("message", async (message) => {
 
     try {
       // Usar axios para obtener la imagen
-      const response = await axios.get(profilePicUrl, { responseType: 'arraybuffer' });
+      const response = await axios.get(profilePicUrl, {
+        responseType: "arraybuffer",
+      });
       const profileBuffer = Buffer.from(response.data);
-      
+
       const editedImageBuffer = await createLgtbiOverlay(profileBuffer);
       const media = new MessageMedia(
         "image/png",
@@ -196,20 +255,20 @@ client.on("message", async (message) => {
 async function createLgtbiOverlay(profileBuffer) {
   try {
     const profileImg = await loadImage(profileBuffer);
-    
+
     // Asegurar un tamaño razonable
     const width = Math.min(1024, profileImg.width);
     const height = Math.min(1024, profileImg.height);
-    
+
     const canvas = createCanvas(width, height);
     const ctx = canvas.getContext("2d");
-    
+
     ctx.drawImage(profileImg, 0, 0, width, height);
-    
+
     const rainbow = createRainbowOverlay(width, height);
     ctx.globalAlpha = 0.4;
     ctx.drawImage(rainbow, 0, 0);
-    
+
     return canvas.toBuffer("image/png");
   } catch (error) {
     console.error("❌ Error al procesar imagen:", error);
@@ -239,15 +298,14 @@ function createRainbowOverlay(width, height) {
   return canvas;
 }
 
-const express = require('express');
+const express = require("express");
 const app = express();
 
-app.get('/', (_, res) => res.send('Bot is alive'));
+app.get("/", (_, res) => res.send("Bot is alive"));
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`HTTP server alive on port ${PORT}`);
 });
-
 
 client.initialize();
